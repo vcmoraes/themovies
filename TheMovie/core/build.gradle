@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-allopen"
+apply plugin: "kotlin-kapt"
+
+def retrofitVersion = '2.3.0'
+def okhttp3Version = '3.9.0'
+def rxjava2_version = '2.1.10'
+def gsonVersion = '2.8.2'
+def rxandroid2_version = '2.0.2'
+
+allOpen {
+    annotation("org.androidannotations.api.KotlinOpen")
+}
+
+def AAVersion = '4.4.0'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    kapt "org.androidannotations:androidannotations:$AAVersion"
+    api "org.androidannotations:androidannotations-api:$AAVersion"
+
+    //EVENT BUS
+    api 'org.greenrobot:eventbus:3.1.1'
+
+    // Networking
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    // OkHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    // Reactivex
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava2_version"
+
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid2_version"
+}
