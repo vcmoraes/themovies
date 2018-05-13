@@ -64,7 +64,8 @@ Libs Utilizadas para apoio:
 * 1 - Android Annotatios - Para injeção de dependências
 * 2 - EvenBus - Para notifição de Eventos
 * 3 - Retrofit - Para chamadas de API
-* 4 - Realm - Para persistência de dados(Contudo ainda não utilizado no projeto)
+* 4 - Picasso - Carregamento de imagens 
+* 5 - Realm - Para persistência de dados(Contudo ainda não utilizado no projeto)
 
 Esse projeto utiliza o conceito MVP (Model View Presenter) com **UseCases**, ou seja, temos a camada da **View** que se comunica com o **Presenter** no qual se comunica com os **UseCases** e os mesmo se comunicam com os Serviços(**core**).
 
