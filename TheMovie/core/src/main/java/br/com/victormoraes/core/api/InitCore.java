@@ -3,6 +3,7 @@ package br.com.victormoraes.core.api;
 import org.androidannotations.annotations.EBean;
 
 import java.io.IOException;
+import java.util.Locale;
 
 import io.reactivex.annotations.NonNull;
 import okhttp3.HttpUrl;
@@ -22,6 +23,7 @@ public class InitCore {
 
                 HttpUrl url = originalHttpUrl.newBuilder()
                         .addQueryParameter("api_key", "8c35f1145014c967014940b61100f44d")
+                        .addQueryParameter("language", Locale.getDefault().toString())
                         .build();
 
                 Request.Builder requestBuilder = original.newBuilder()

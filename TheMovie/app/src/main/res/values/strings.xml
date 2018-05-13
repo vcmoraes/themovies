@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">The Movie</string>
+    <string name="error_dialog_retry">Ops! Estamos tendo alguns problemas, verifique sua conexão e se persistir entre em contato. Gostaria de tentar novamente?</string>
+    <string name="search">Buscando...</string>
 </resources>
