@@ -65,11 +65,11 @@ git clone https://github.com/vcmoraes/themovies
 
 Libs Utilizadas para apoio:
 
-* 1 - Android Annotatios - Para injeção de dependências
-* 2 - EvenBus - Para notifição de Eventos
-* 3 - Retrofit - Para chamadas de API
-* 4 - Picasso - Carregamento de imagens 
-* 5 - Realm - Para persistência de dados(Contudo ainda não utilizado no projeto)
+* 1 - Android Annotatios - Para injeção de dependências, pois por ser fácil usando as anotações deixa o desenvolvimento mais rápido e código mais limpo.
+* 2 - EvenBus - Para notifição de Eventos, usando anotações e Objetos conseguimos administrar melhor os eventos(Listeners) de objetos.
+* 3 - Retrofit - Para chamadas de API, eles nos ajuda bastante no desenvolvimento, pois como trabalhamos com objetos, conseguimos obter chamadas e resposta de modo mais eficiente. Além de outras vantagens como integração com Rx, no qual por exemplo conseguimos executar n request em paralelo, coisa que antes era difícil. 
+* 4 - Picasso - Carregamento de imagens, gosto dessa lib pois manipular cache de imagens com o Picasso é mais simples.
+* 5 - Realm - Para persistência de dados(Contudo ainda não utilizado no projet), gosto do Realm pela simplicidade em que conseguimos manipular o banco de dados e fazer a persistência, sendo que antigamente era complicado com o SQLLite diretamente. 
 
 Esse projeto utiliza o conceito MVP (Model View Presenter) com **UseCases**, ou seja, temos a camada da **View** que se comunica com o **Presenter** no qual se comunica com os **UseCases** e os mesmo se comunicam com os Serviços(**core**).
 
