@@ -2,24 +2,24 @@
 **Através do GIT BASH**
 
 * 1 - Abra o Gitbash
-* 2 - Vamos utilizar o comando **bare**, que copia as ramificações do projeto. Para clonar o projeto utilize o comando **git clone --bare "URL do repositôrio"**
+* 2 - Vamos utilizar o comando **bare**, que copia as ramificações do projeto. Para clonar o projeto utilize o comando **git clone --bare "URL do repositório"**
 * 3 - Apôs termos clonado o projeto, iremos para o caminho que se encontra o projeto utlizando **cd nome_projeto.git**
-* 4 - Uma vez que estamos dentro do projeto, podemos espelha-lo para outro repositôrio utlizando o comando **git push --mirror "URL do novo repositôrio"**
-* 5 - Sem necessidade de existir o velho repositôrio, podemos remove-lo. Utilizando o comando **cd..** iremos voltar para a pasta root, agora com o comando **rm -rf "Velho-repositôrio.git"** iremos remover o projeto.
+* 4 - Uma vez que estamos dentro do projeto, podemos espelha-lo para outro repositório utlizando o comando **git push --mirror "URL do novo repositório"**
+* 5 - Sem necessidade de existir o velho repositório, podemos remove-lo. Utilizando o comando **cd..** iremos voltar para a pasta root, agora com o comando **rm -rf "Velho-repositório.git"** iremos remover o projeto.
 
 **EXEMPLO**
 
 ```
 Projeto: https://github.com/vcmoraes/themovies
 
-//CLONANDO O REPOSITÔRIO
+//CLONANDO O REPOSITóRIO
 git clone --bare https://github.com/vcmoraes/themovies
 
-//ESPELHANDO O PROJETO PARA O NOVO REPOSITÔRIO
+//ESPELHANDO O PROJETO PARA O NOVO REPOSITÓRIO
 cd the-movie.git
 git push --mirror https://github.com/novocaminhogit/new-the-movie.git
 
-//REMOVENTO O REPOSITÔRIO ANTIGO
+//REMOVENTO O REPOSITÓRIO ANTIGO
 cd ..
 rm -rf the-movie.git
 ```
@@ -34,7 +34,7 @@ rm -rf the-movie.git
 		 Nota: Para ver os diretôrios presentes em que o usuário se encontra digite a palavra dir e aperte ENTER
 * 3 - Apôs selecionado e especificado o caminho copie a URL do diretôrio onde o projeto GIT está.
 * 4 - Para importar o projeto use o comando **git clone** "URL do diretôrio"
-* 5 - Caso você tenha permiss„o para acessar o repositôrio, o projeto será copiado para o caminho especificado, caso não tenha, irá abrir uma sessão de login para entrar com os dados de usuário.
+* 5 - Caso você tenha permiss„o para acessar o repositório, o projeto será copiado para o caminho especificado, caso não tenha, irá abrir uma sessão de login para entrar com os dados de usuário.
 
 **EXEMPLO**
 
