@@ -3,11 +3,17 @@ package br.com.victormoraes.themovie.activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
+import android.view.WindowManager;
 
 import org.androidannotations.annotations.EBean;
 import org.greenrobot.eventbus.EventBus;
+
+import br.com.victormoraes.themovie.R;
 
 @EBean
 public class BaseActivity extends AppCompatActivity {
@@ -64,6 +70,18 @@ public class BaseActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        }
     }
 }
 
