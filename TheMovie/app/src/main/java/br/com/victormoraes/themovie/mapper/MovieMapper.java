@@ -26,6 +26,11 @@ public class MovieMapper {
     @NonNull
     public Movie toMovie(MovieResponse movieResponse) {
         Movie movie = new Movie();
+        movie.setId(movieResponse.getId());
+        movie.setTitle(movieResponse.getTitle());
+        movie.setPoster(movieResponse.getPoster());
+        movie.setOverview(movieResponse.getOverview());
+        movie.setBackdropPath(movieResponse.getBackdropPath());
         return movie;
     }
 }

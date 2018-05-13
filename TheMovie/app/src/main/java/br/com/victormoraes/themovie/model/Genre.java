@@ -3,7 +3,9 @@ package br.com.victormoraes.themovie.model;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
-public class Genre {
+import java.io.Serializable;
+
+public class Genre implements Serializable {
 
     private Integer id;
     private String name;

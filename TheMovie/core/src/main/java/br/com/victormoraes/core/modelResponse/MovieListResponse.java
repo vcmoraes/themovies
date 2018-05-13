@@ -36,6 +36,6 @@ public class MovieListResponse {
     }
 
     public boolean hasMoreMovies() {
-        return getPage() == getTotalPages();
+        return getPage() < getTotalPages();
     }
 }

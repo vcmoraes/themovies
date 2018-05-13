@@ -1,11 +1,13 @@
 package br.com.victormoraes.themovie.fragment;
 
+import org.androidannotations.annotations.EBean;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import br.com.victormoraes.core.exceptions.NetworkingProblems;
 
+@EBean
 public abstract class BaseSubscriberFragment extends BaseFragment {
 
     @Override
