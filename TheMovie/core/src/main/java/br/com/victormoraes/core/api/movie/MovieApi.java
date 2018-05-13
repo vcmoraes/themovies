@@ -11,6 +11,7 @@ import br.com.victormoraes.core.api.BaseApi;
 import br.com.victormoraes.core.listerner.ResponseServer;
 import br.com.victormoraes.core.modelResponse.GenreListResponse;
 import br.com.victormoraes.core.modelResponse.GenreResponse;
+import br.com.victormoraes.core.modelResponse.MovieDetailResponse;
 import br.com.victormoraes.core.modelResponse.MovieListResponse;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -63,6 +64,31 @@ public class MovieApi implements IMovieApi {
             @Override
             public void onNext(Response<MovieListResponse> listResponse) {
                 listResponseServer.success(listResponse.body());
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                serviceApi.verifyErrorDefault(context, e, listResponseServer);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+    }
+
+    @Override
+    public void getMovieDetail(int movieId, final ResponseServer<MovieDetailResponse> listResponseServer) {
+        serviceApi.getApi().getMovieDetail(movieId).observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io()).subscribe(new Observer<Response<MovieDetailResponse>>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(Response<MovieDetailResponse> movieDetailResponseResponse) {
+                listResponseServer.success(movieDetailResponseResponse.body());
             }
 
             @Override

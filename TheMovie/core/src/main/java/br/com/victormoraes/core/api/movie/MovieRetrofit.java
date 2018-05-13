@@ -1,6 +1,7 @@
 package br.com.victormoraes.core.api.movie;
 
 import br.com.victormoraes.core.modelResponse.GenreListResponse;
+import br.com.victormoraes.core.modelResponse.MovieDetailResponse;
 import br.com.victormoraes.core.modelResponse.MovieListResponse;
 import io.reactivex.Observable;
 import io.reactivex.annotations.NonNull;
@@ -16,4 +17,7 @@ public interface MovieRetrofit {
 
     @GET("3/genre/{genreId}/movies")
     Observable<Response<MovieListResponse>> getMovies(@Path("genreId") @NonNull int genreId, @Query("page") int page);
+
+    @GET("3/movie/{movieId}")
+    Observable<Response<MovieDetailResponse>> getMovieDetail(@Path("movieId") @NonNull int movieId);
 }
