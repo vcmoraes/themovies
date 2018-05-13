@@ -10,18 +10,18 @@
 **EXEMPLO**
 
 ```
-Projeto: https://bitbucket.org/vcmoraesedeploy/android-base
+Projeto: https://github.com/vcmoraes/themovies
 
 //CLONANDO O REPOSIT”RIO
-git clone --bare https://bitbucket.org/vcmoraesedeploy/android-base
+git clone --bare https://github.com/vcmoraes/themovies
 
 //ESPELHANDO O PROJETO PARA O NOVO REPOSIT”RIO
-cd android-base.git
-git push --mirror https://github.com/matheusedeploy/new-android-base.git
+cd the-movie.git
+git push --mirror https://github.com/novocaminhogit/new-the-movie.git
 
 //REMOVENTO O REPOSIT”RIO ANTIGO
 cd ..
-rm -rf android-base.git
+rm -rf the-movie.git
 ```
 
 # Importar Projeto GIT
@@ -39,11 +39,11 @@ rm -rf android-base.git
 **EXEMPLO**
 
 ```
-Projeto: https://bitbucket.org/vcmoraesedeploy/android-base
+Projeto: https://github.com/vcmoraes/themovies
 
 //Navegar atÈ o caminho da pasta
 cd Users/Public/Documents
-git clone https://bitbucket.org/vcmoraesedeploy/android-base
+git clone https://github.com/vcmoraes/themovies
 ```
 
 # Importar Projeto
