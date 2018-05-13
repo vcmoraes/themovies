@@ -2,7 +2,7 @@
 **Através do GIT BASH**
 
 * 1 - Abra o Gitbash
-* 2 - Vamos utilizar o comando **bare**, que copia as ramificações do projeto. Para clonar o projeto utilize o comando **git clone --bare "URL do repositÛrio"**
+* 2 - Vamos utilizar o comando **bare**, que copia as ramificações do projeto. Para clonar o projeto utilize o comando **git clone --bare "URL do repositôrio"**
 * 3 - Apôs termos clonado o projeto, iremos para o caminho que se encontra o projeto utlizando **cd nome_projeto.git**
 * 4 - Uma vez que estamos dentro do projeto, podemos espelha-lo para outro repositôrio utlizando o comando **git push --mirror "URL do novo repositôrio"**
 * 5 - Sem necessidade de existir o velho repositôrio, podemos remove-lo. Utilizando o comando **cd..** iremos voltar para a pasta root, agora com o comando **rm -rf "Velho-repositôrio.git"** iremos remover o projeto.
